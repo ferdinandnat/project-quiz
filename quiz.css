@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Marko+One&family=Montserrat:wght@600&display=swap');
+
+body {
+  background-color: #48278F;
+  font-family: 'Montserrat';
+  color: white;
+  text-align: center;
+}
+
+.question-group {
+    margin: 15px auto 0;
+}
+    

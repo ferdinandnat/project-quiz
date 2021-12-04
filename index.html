@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+  <title>Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="input">
+    <h1>Login to access multiple choice</h1>
+    <input type="text" id="username-input" placeholder="Username" />
+    <button id="button">Enter</button>
+  </div>
+
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    const usernameElement = document.getElementById('username-input')
+    const button = document.getElementById('button')
+    var input = document.getElementById("username-input");
+    input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("button").click();
+  }
+});
+    button.addEventListener('click', (event) => {
+    validateData()
+    })
+
+    function validateData(){
+      const username = usernameElement.value
+      if (username == "ferdinand@gmail.com") {
+        window.location.href = "quiz.html"
+      } else {
+        Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Password Salah',
+
+})
+      }
+    }
+  </script>
+</body>
+
