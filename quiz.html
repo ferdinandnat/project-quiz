@@ -65,4 +65,20 @@
   <div class="result">
     <p id="score-result">Your result will be here</p>
   </div>
+
+  <script>
+    const button = document.getElementById('submit-question')
+
+    const firstQuestion = document.querySelector('input[name=firstQuestion]:checked')
+    
+    button.addEventListener('click', event => {      
+      if (firstQuestion) {
+        console.log(firstQuestion)
+        console.log(`user filled ${firstQuestion.value}`)
+      } else {
+        console.log('user doesn\'t filled')
+      }
+    })
+
+  </script>
 </body>
