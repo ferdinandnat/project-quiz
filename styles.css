@@ -9,6 +9,9 @@ body {
 .input {
     margin: 400px auto 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
   }
 
   input[type='text'] {
@@ -31,6 +34,7 @@ body {
     border: 2px solid #cccccc;
     border-radius: 8px;
     font-family: 'Montserrat';
+    margin-top: 10px;
   }
 
   input[type='text']:focus{
