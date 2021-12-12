@@ -64,21 +64,89 @@
 
   <div class="result">
     <p id="score-result">Your result will be here</p>
+    <p id="nilai"></p>
+
   </div>
 
   <script>
     const button = document.getElementById('submit-question')
-
-    const firstQuestion = document.querySelector('input[name=firstQuestion]:checked')
+    const nilaielement = document.getElementById('nilai')
     
-    button.addEventListener('click', event => {      
+
+    
+    button.addEventListener('click', event => {   
+      const firstQuestion = document.querySelector('input[name=firstQuestion]:checked')
+    const secondQuestion = document.querySelector('input[name=secondQuestion]:checked')
+    const thirdQuestion = document.querySelector('input[name=thirdQuestion]:checked')
+    const fourthQuestion = document.querySelector('input[name=fourthQuestion]:checked')
+    const fifthQuestion = document.querySelector('input[name=fifthQuestion]:checked')
+    let nilai = 0   
       if (firstQuestion) {
         console.log(firstQuestion)
         console.log(`user filled ${firstQuestion.value}`)
+        if (firstQuestion.value == "A") {
+          nilai += 20
+          console.log('jawaban A benar')
+        } else {
+          console.log(`jawaban ${firstQuestion.value} salah`)
+        }
+
       } else {
         console.log('user doesn\'t filled')
       }
+      if (secondQuestion) {
+      console.log(secondQuestion)
+        console.log(`user filled ${secondQuestion.value}`)
+        if (secondQuestion.value == "B") {
+          nilai += 20
+          console.log('jawaban B benar')
+        } else {
+          console.log(`jawaban ${secondQuestion.value} salah`)
+        }
+      } else {
+        console.log('user doesn\'t filled')
+      }
+      if (thirdQuestion) {
+      console.log(thirdQuestion)
+        console.log(`user filled ${thirdQuestion.value}`)
+        if (thirdQuestion.value == "C") {
+          nilai += 20
+          console.log('jawaban C benar')
+        } else {
+          console.log(`jawaban ${thirdQuestion.value} salah`)
+        }
+      } else {
+        console.log('user doesn\'t filled')
+      }
+      if (fourthQuestion) {
+      console.log(fourthQuestion)
+        console.log(`user filled ${fourthQuestion.value}`)
+        if (fourthQuestion.value == "D") {
+          nilai += 20
+          console.log('jawaban D benar')
+        } else {
+          console.log(`jawaban ${fourthQuestion.value} salah`)
+        }
+      } else {
+        console.log('user doesn\'t filled')
+      }
+      if (fifthQuestion) {
+      console.log(fifthQuestion)
+        console.log(`user filled ${fifthQuestion.value}`)
+        if (fifthQuestion.value == "A") {
+          nilai += 20
+          console.log('jawaban A benar')
+        } else {
+          console.log(`jawaban ${fifthQuestion.value} salah`)
+        }
+      } else {
+        console.log('user doesn\'t filled')
+      }
+      nilaielement.innerHTML=`Nilai Anda ${nilai}`
+      console.log(`nilai anda ${nilai}`)
     })
+
+    
 
   </script>
 </body>
